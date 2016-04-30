@@ -1,7 +1,7 @@
 {
   "name": "starkiller-base",
   "version": "1.0.0",
-  "description": "RESTful API Viewer using SWAPI API, AngularJS, Materialize, HTML, CSS, JavaScript",
+  "description": "RESTful API Viewer using SWAPI API, AngularJS, Bootstrap, HTML, CSS, JavaScript",
   "main": "index.js",
   "dependencies": {
     "angular-ui-router": "^0.2.18"
