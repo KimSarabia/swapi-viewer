@@ -1,29 +1,29 @@
 <!-- index.html -->
-    <!DOCTYPE html>
-    <html ng-app="planetModule">
-    <head>
-      <!-- STYLE -->
-      <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+<!DOCTYPE html>
+<html ng-app="planetModule">
 
-      <!-- SCSRIPTS -->
-	  <script src="../Scripts/lib/jquery/jquery-1.11.0.js"></script>
-	   <script src="../Scripts/lib/jquery/jquery-ui-1.10.4.js"></script>
-	  <script src="../Scripts/lib/bootstrap/bootstrap.min.js"></script>
-      <script src="../Scripts/lib/angular/angular.js"></script>
-      <script src="../Scripts/lib/angular/angular-route.js"></script>
-	  <script src="../Scripts/lib/angular-plugin/ng-table.js"></script>
-	  <script src="../Scripts/lib/angular-plugin/ui-bootstrap-tpls-0.11.0.js"></script>
-	  <script src="../Scripts/app/app.js"></script>
-	  <script src="../Scripts/planet/planetModule.js"></script>
-	  <script src="../Scripts/planet/service/modalService.js"></script>	 
-	  <script src="../Scripts/planet/service/planetService.js"></script>	   
-	  <script src="../Scripts/planet/controller/planetController.js"></script>
-	  <script src="../Scripts/planet/controller/planetDetailController.js"></script>     	 
-    </head>
-    <body>
-        <!-- HEADER AND NAVBAR -->
-        <header>
-            <nav class="navbar navbar-inverse">
+<head>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+
+    <script src="../javascript/lib/jquery/jquery-1.11.0.js"></script>
+    <script src="../javascript/lib/jquery/jquery-ui-1.10.4.js"></script>
+    <script src="../javascript/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="../javascript/lib/angular/angular.js"></script>
+    <script src="../javascript/lib/angular/angular-route.js"></script>
+    <script src="../javascript/lib/angular-plugin/ng-table.js"></script>
+    <script src="../javascript/lib/angular-plugin/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="../javascript/app/app.js"></script>
+    <script src="../javascript/planet/planetModule.js"></script>
+    <script src="../javascript/planet/service/modalService.js"></script>
+    <script src="../javascript/planet/service/planetService.js"></script>
+    <script src="../javascript/planet/controller/planetController.js"></script>
+    <script src="../javascript/planet/controller/planetDetailController.js"></script>
+</head>
+
+<body>
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">Star Wars API Planet Data</a>
@@ -35,35 +35,36 @@
                     <li><a href="index.html">Planet</a></li>
                 </ul>
             </div>
-            </nav>
-        </header>
+        </nav>
+    </header>
 
-        <!-- MAIN CONTENT AND INJECTED VIEWS -->
-        <div id="main" class="container" ng-controller="planetController">
-		<div class="row">
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main" class="container" ng-controller="planetController">
+        <div class="row">
             <table ng-table="tableParams" show-filter="booleanFilter" class="table table-condensed table-striped table-hover">
-                    <tbody class="table-body">
-                        <tr ng-repeat="planet in $data">
-                            <td data-title="'No'">
-                                {{$index + 1}}
-                            </td>
-                            <td data-title="'Name'" filter="{ 'name': 'text' }" sortable="'name'">
-                                <a href="" class="btn btn-link btn-xs" ng-click="OpenPlanetDetail($index+2)">{{planet.name}}</a>
-                            </td>
-                            <td data-title="'Diameter'" filter="{ 'diameter': 'text' }" sortable="'diameter'">
-                                {{planet.diameter}}
-                            </td>
-                            <td data-title="'Gravity'" filter="{ 'gravity': 'text' }" sortable="'gravity'">
-                                {{planet.gravity}}
-                            </td>
-                            <td data-title="'Population'" filter="{ 'population': 'text' }" sortable="'population'">
-                                {{planet.population}}
-                            </td>
-                        </tr>
-                    </tbody>
-            </table>			
+                <tbody class="table-body">
+                    <tr ng-repeat="planet in $data">
+                        <td data-title="'No'">
+                            {{$index + 1}}
+                        </td>
+                        <td data-title="'Name'" filter="{ 'name': 'text' }" sortable="'name'">
+                            <a href="" class="btn btn-link btn-xs" ng-click="OpenPlanetDetail($index+2)">{{planet.name}}</a>
+                        </td>
+                        <td data-title="'Diameter'" filter="{ 'diameter': 'text' }" sortable="'diameter'">
+                            {{planet.diameter}}
+                        </td>
+                        <td data-title="'Gravity'" filter="{ 'gravity': 'text' }" sortable="'gravity'">
+                            {{planet.gravity}}
+                        </td>
+                        <td data-title="'Population'" filter="{ 'population': 'text' }" sortable="'population'">
+                            {{planet.population}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        </div>
-		</div>
-    </body>
-    </html>
+    </div>
+    </div>
+</body>
+
+</html>

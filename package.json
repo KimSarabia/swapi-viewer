@@ -1,0 +1,23 @@
+{
+  "name": "starkiller-base",
+  "version": "1.0.0",
+  "description": "RESTful API Viewer using SWAPI API, AngularJS, Materialize, HTML, CSS, JavaScript",
+  "main": "index.js",
+  "dependencies": {
+    "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimSarabia/swapi-viewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimSarabia/swapi-viewer/issues"
+  },
+  "homepage": "https://github.com/KimSarabia/swapi-viewer#readme"
+}
