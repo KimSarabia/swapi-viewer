@@ -3,7 +3,10 @@
 <html ng-app="planetModule">
 
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style.css">
 
     <script src="../javascript/lib/jquery/jquery-1.11.0.js"></script>
     <script src="../javascript/lib/jquery/jquery-ui-1.10.4.js"></script>
@@ -12,6 +15,7 @@
     <script src="../javascript/lib/angular/angular-route.js"></script>
     <script src="../javascript/lib/angular-plugin/ng-table.js"></script>
     <script src="../javascript/lib/angular-plugin/ui-bootstrap-tpls-0.11.0.js"></script>
+
     <script src="../javascript/app/app.js"></script>
     <script src="../javascript/planet/planetModule.js"></script>
     <script src="../javascript/planet/service/modalService.js"></script>
@@ -21,27 +25,10 @@
 </head>
 
 <body>
-    <!-- HEADER AND NAVBAR -->
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Star Wars API Planet Data</a>
-                </div>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="../People/index.html">People</a></li>
-                    <li><a href="index.html">Planet</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main" class="container" ng-controller="planetController">
         <div class="row">
-            <table ng-table="tableParams" show-filter="booleanFilter" class="table table-condensed table-striped table-hover">
+            <table ng-table="tableParams" show-filter="booleanFilter" class="table table-hover center-table">
                 <tbody class="table-body">
                     <tr ng-repeat="planet in $data">
                         <td data-title="'No'">
@@ -64,6 +51,9 @@
             </table>
         </div>
     </div>
+
+    <h6><a href="/People/index.html">Citizen Search</a></h6>
+
     </div>
 </body>
 

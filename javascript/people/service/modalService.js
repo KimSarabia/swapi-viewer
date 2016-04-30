@@ -1,12 +1,11 @@
-peopleModule.factory('modalService', ['$modal', function ($modal) {
+peopleModule.factory('modalService', ['$modal', function($modal) {
     var modalService = {
         openDetailPeopleModal: openDetailPeopleModal
     };
-	
-	return modalService;
-	
-	function openModal(templateUrl, controllerName, size, resolveObject) 
-	{
+
+    return modalService;
+
+    function openModal(templateUrl, controllerName, size, resolveObject) {
         var modalInstance = $modal.open({
             templateUrl: templateUrl,
             controller: controllerName,
@@ -15,14 +14,13 @@ peopleModule.factory('modalService', ['$modal', function ($modal) {
         });
         return modalInstance;
     }
-	
-	function openDetailPeopleModal(peopleId)
-	{
-		var modalInstance = openModal('PeopleDetail.html','peopleController','lg',{
-			selectedPeopleId: function(){
-					return peopleId;
-			}
-		});
-		return modalInstance;
-	}
+
+    function openDetailPeopleModal(peopleId) {
+        var modalInstance = openModal('PeopleDetail.html', 'peopleController', 'lg', {
+            selectedPeopleId: function() {
+                return peopleId;
+            }
+        });
+        return modalInstance;
+    }
 }]);

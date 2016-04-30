@@ -1,4 +1,4 @@
-peopleModule.controller('peopleDetailController',peopleDetailController);
+peopleModule.controller('peopleDetailController', peopleDetailController);
 
 peopleDetailController.$inject = [
     '$scope',
@@ -6,20 +6,20 @@ peopleDetailController.$inject = [
 ];
 
 function peopleDetailController(
-	$scope,
+    $scope,
     peopleService
-){
+) {
     var vm = $scope;
-	
-	peopleService.getPeopleById(PeopleId).then(OnSuccessGetPeople, OnFailGetList);
-	
-	function OnSuccessGetPeople(result) {
+
+    peopleService.getPeopleById(PeopleId).then(OnSuccessGetPeople, OnFailGetList);
+
+    function OnSuccessGetPeople(result) {
         vm.SelectedPeople = result;
     }
-	
-	 function OnFailGetList(errorMessage) {
+
+    function OnFailGetList(errorMessage) {
         alert('Something Bad Happen')
     }
-	
-	
+
+
 }
